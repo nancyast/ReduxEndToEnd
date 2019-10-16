@@ -8,35 +8,24 @@ module.exports = {
   watch: true,
   output: {
     path: __dirname,
-    filename: 'bundle.js',
-    chunkFilename: '[name].js'
+    filename: 'bundle.js'
   },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /.jsx?$/,
-  //       include: [path.resolve(__dirname, 'app')],
-  //       exclude: [path.resolve(__dirname, 'node_modules')],
-  //       loader: 'babel-loader',
-  //       query: {
-  //         presets: [
-  //           [
-  //             '@babel/env',
-  //             {
-  //               targets: {
-  //                 browsers: 'last 2 chrome versions'
-  //               }
-  //             }
-  //           ]
-  //         ]
-  //       }
-  //     }
-  //   ]
-  // },
+  module: {
+    rules: [
+      {
+        test: /.jsx?$/,
+        include: [path.resolve(__dirname, 'app')],
+        exclude: [path.resolve(__dirname, 'node_modules')],
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  },
   resolve: {
     extensions: ['.json', '.js', '.jsx']
   },
-  devtool: 'source-map',
+  devtool: '#cheap-module-source-map',
   devServer: {
     historyApiFallback: true
   },
