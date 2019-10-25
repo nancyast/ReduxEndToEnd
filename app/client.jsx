@@ -1,4 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import RGB from './RGB';
+import './app.scss';
 
-render(<h1>Hello world</h1>, document.getElementById('root'));
+render(<RGB />, document.getElementById('root'));

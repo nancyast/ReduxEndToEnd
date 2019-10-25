@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","sources":["webpack:///./app/app.scss"],"sourcesContent":[".color-block {\n  width: 500px;\n  height: 100px; }\n"],"mappings":"AAAA;AACA;AACA;;","sourceRoot":""}
